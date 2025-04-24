@@ -1,0 +1,16 @@
+const Config = {
+    ROSBRIDGE_SERVER_IP: "192.168.1.130",
+    // ROSBRIDGE_SERVER_IP: "172.20.10.2",
+    // ROSBRIDGE_SERVER_IP: "10.20.8.248",
+    ROSBRIDGE_SERVER_PORT: "9090",
+    RECONNECTION_TIMER: 3000,
+    WAIT_ROBOTSTATE_TIMER: 3000,
+    WAIT_HISTORY_TIMER: 5000,
+    CMD_VEL_TOPIC: "turtle1/cmd_vel",
+    CMD_GOAL_TOPIC: "move_base/goal",
+    
+    CLIENT_PORT: "3000",
+    SERVER_PORT: "8081"
+};
+
+export default Config;

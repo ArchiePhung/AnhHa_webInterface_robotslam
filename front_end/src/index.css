@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* main {
+  min-height: 80vh;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body{
+  overflow:hidden;
+} */
+
+.container_body{
+  min-height: 80vh;  
+}
+
+
+/* home header style */
+.home-container {
+  position: absolute;
+  /* width: 77%;
+  height: 100%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+h2.greeting {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+h2.wlc {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+h1.title {
+  font-size: 70px;
+  font-weight: 900;
+}
+
+/* map header style */
+.map-container {
+  position: absolute;
+  /* width: 100%; */
+  /* height: 100%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -17%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.button-child-container {
+  display: flex;
+  align-items: center; /* Canh giữa theo chiều dọc */
+  justify-content: space-between; /* Phân bố đều các phần tử */
+  gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+/* h2.empty_warn {
+  font-size: 50px;
+  font-weight: 700;  
+} */

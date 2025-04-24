@@ -1,0 +1,64 @@
+1. Create a new react app
+npx create-react-app react-ros-robot
+
+2. Change new style of web
+  >> bootswatch.com
+  >> add css file to folder /src/bootstrap
+
+3. React bootstrap
+
+
+I. How to run main app server
+0/ run simulation map 
+sdck
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/archie/catkin_ws/src/turtlebot3/turtlebot3_navigation/maps/map.yaml
+Tắt hiển thị gazebo đi cho nhẹ
+
+>> Hien thị vi trí robot trên ban do
+rosrun riotu_robot_pose_publisher riotu_robot_pose_publisher
+
+1/ Run rosbridge_server
+roslaunch rosbridge_server rosbridge_websocket.launch
+
+2/ Run backend server
+cd /home/archie/simulation_ws/src/web_interfaces/full-stack authenticaton/server
+npm start
+
+3/ Run front end server
+cd /home/archie/simulation_ws/src/web_interfaces/web_interfaces_robot
+npm start
+
+II. How to create a mysql database in phpmyadmin
+https://www.youtube.com/watch?v=DwHxDlaOsyw
+
+Truy cập vào MYSQL phpMyAdmin -> http://127.0.0.1/phpmyadmin/index.php
+user: phpmyadmin
+pass: 000
+
+
+I/ Open WEb server tutorial
+Trước khi chạy, kiểm tra xem ip của pi đang là bao nhiêu bằng lệnh: ifconfig
+Nếu IP thay đổi, cần sửa trong code
+/test_final/src/scripts/Config.js:  ROSBRIDGE_SERVER_IP : [IP_address]
+va
+/server_final/.env: SERVER_IP=[IP_address]
+
+1/ Open Terminal, run : roscore
+2/ Open Terminal 2, run: 
+  - source /haise_pi_catkin_ws/devel/setup.bash 
+  - roslaunch rosbridge_server rosbridge_websocket.launch
+3/ Open Terminal 3, run: 
+    - cd /haise_pi_catkin_ws/src/server_final
+    - npm start
+4/ Open Termianl 4, run 
+    - cd /haise_pi_catkin_ws/src/test_final
+    - npm start
+
+5/ Open Termianl 5, Nếu đã có vị trí robot rồi, chạy
+  - source /haise_pi_catkin_ws/devel/setup.bash
+  - rosrun riotu_robot_pose_publisher riotu_robot_pose_publisher
+
+để đẩy vị trí robot lên web\
+
